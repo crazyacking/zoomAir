@@ -27,7 +27,7 @@ public class PageController {
 
     /**
      * @author : crazyacking
-     * @date : 2016-4-26
+     * @date : 2016/12/17
      *
      * 主页面
      *
@@ -40,7 +40,7 @@ public class PageController {
 
     /**
      * @author : crazyacking
-     * @date : 2016-04-26
+     * @date : 2016/12/17
      *
      * 新学生报名
      *
@@ -54,7 +54,7 @@ public class PageController {
 
     /**
      * @author : crazyacking
-     * @date : 2016-4-26
+     * @date : 2016/12/17
      *
      * 学生列表
      *
@@ -86,7 +86,7 @@ public class PageController {
 
     /**
      * @author : crazyacking
-     * @date : 2016-4-26
+     * @date : 2016/12/17
      *
      * 返回说明页面
      *

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author : crazyacking
- * @date : 2016/4/25
+ * @date : 2016/12/17
  */
 public interface SignUpTypeMapper {
     List<HashMap> getAllSignUpType();

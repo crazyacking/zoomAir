@@ -1,58 +1,208 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <title></title>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <style>
-        table tr td{
+        table tr td {
             text-align: center;
         }
     </style>
 </head>
+<style>
+    * {
+        font-size: 14px;
+        font-family: "microsoft yahei";
+    }
+
+    body {
+        background: #F8FDFF;
+    }
+
+    .con1 {
+        margin-top: 10px;
+        margin-left: 225px;
+        margin: 0px auto;
+    }
+
+    .con2 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .span-main {
+        padding-top: 45px;
+    }
+
+    .span1 {
+        text-align: center;
+        line-height: 33px;
+        margin-left: 225px;
+        color: #DB7C22;
+        font-weight: bold;
+    }
+
+    .WJtable {
+        margin-top: 20px;
+    }
+
+    .UnityTable {
+        width: 927px;
+        margin: 0 auto;
+    }
+
+    .UnityTable_n {
+        float: left;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+        min-height: 340px;
+        position: relative;
+        border-left: 1px solid #DBDBDB;
+        border-right: 1px solid #DBDBDB;
+        border-bottom: 1px solid #DBDBDB;
+        border-top: 1px solid #DBDBDB;
+        margin: auto;
+    }
+
+    .UnityTable .tablehead {
+
+    }
+
+    .UnityTable .tablehead thead tr td {
+        background-color: #EFEFEF;
+        /*border-top:1px solid #DBDBDB;*/
+        border-bottom: 1px solid #EFEFEF;
+        border-top: 0px;
+        margin: auto;
+    }
+
+    .UnityTable thead td, .UnityTable tbody td {
+        overflow: hidden;
+        white-space: nowrap;
+        margin: auto;
+    }
+
+    .UnityTable .tablehead tr .tdiv {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 10px 0 0;
+        max-width: 200px;
+        margin: auto;
+    }
+
+    .UnityTable .tablehead tr .tdiv img {
+        margin: 5px;
+        margin: auto;
+    }
+
+    .UnityTable .tablehead tr td {
+        border-bottom: 1px solid #EFEFEF;
+        line-height: 30px;
+        padding: 0px 10px;
+        margin: 0px;
+        border-left: 1px solid #EFEFEF;
+        margin: auto;
+    }
+
+    .UnityTable .tablehead tr td:last-child {
+        border-right: none;
+    }
+
+
+</style>
+
 <body>
-<h3>书籍列表</h3>
-
-<table cellpadding="10" cellspacing="30">
-    <thead>
-        <th>书名</th>
-        <th>价格</th>
-        <th>ISBN</th>
-        <th>作者</th>
-        <th>上架时间</th>
-        <th>是否下架</th>
-        <th>编辑</th>
-    </thead>
-    <tr th:each="book: ${bookList}">
-        <td th:text="${book.name}"></td>
-        <td th:text="${book.price}"></td>
-        <td th:text="${book.isbn}"></td>
-        <td th:text="${book.author}"></td>
-        <td th:text="${book.createdTime}"></td>
-        <td th:if="${book.expired == 0}">下架</td>
-        <td th:if="${book.expired == 1}">有货</td>
-        <td>
-            <a th:href="@{/book/updateInput(isbn=${book.isbn})}" id="modiry_book">修改</a>
-            <a th:href="@{/book/del(isbn=${book.isbn})}" class="del_book">删除</a>
-        </td>
-    </tr>
-</table>
-
-<div>
-    <button id="add_new_book" onclick="javascript:window.location.href='/book/addInput'">新增图书</button>
+<div class="con1">
+    <img src="../images/lg.png"/>
 </div>
+<div class="con2">
+    <div class="span-main">
+        <span class="span1">书籍列表</span>
+    </div>
+    <div class="UnityTable_n">
+        <table class="tablehead no_bL" cellpadding="1px" border="2px">
+            <thead>
+            <th>书名</th>
+            <th>价格</th>
+            <th>ISBN</th>
+            <th>作者</th>
+            <th>上架时间</th>
+            <th>是否下架</th>
+            <th>编辑</th>
+            </thead>
+            <tr th:each="book: ${bookList}">
 
-<script type="text/javascript">
-    $(function(){
-        $('.del_book').click(function(){
-            if(confirm("确定要删除此书吗?")){
-                return true;
-            }
-            return false;
-        });
 
-    })
-</script>
+                <td style="width:20px;">
+                    <div class='tdiv'><input class="selectall" type="checkbox" style="width:20px"/></div>
+                </td>
+
+                <td class="sequencedown" th:text="${book.name}">
+                    <div style="" class='tdiv'></div>
+                </td>
+
+
+                <td class="sequence" th:text="${book.price}">
+                    <div style="" class='tdiv'></div>
+                </td>
+
+                <td class="sequence" th:text="${book.isbn}">
+                    <div style="" class='tdiv'></div>
+                </td>
+
+                <td class="sequence" th:text="${book.author}">
+                    <div style="" class='tdiv'></div>
+                </td>
+
+                <td class="sequence" th:text="${book.createdTime}">
+                    <div style="" class='tdiv'></div>
+                </td>
+
+                <td class="sequence" th:if="${book.expired == 0}">
+                    <div style="" class='tdiv'>下架</div>
+                </td>
+
+                <td class="sequence" th:if="${book.expired == 1}">
+                    <div style="" class='tdiv'>有货</div>
+                </td>
+
+
+                <!--<td th:text="${book.name}"></td>-->
+                <!--<td th:text="${book.price}"></td>-->
+                <!--<td th:text="${book.isbn}"></td>-->
+                <!--<td th:text="${book.author}"></td>-->
+                <!--<td th:text="${book.createdTime}"></td>-->
+                <!--<td th:if="${book.expired == 0}">下架</td>-->
+                <!--<td th:if="${book.expired == 1}">有货</td>-->
+                <td class="sequence">
+                    <a th:href="@{/book/updateInput(isbn=${book.isbn})}" id="modiry_book">修改</a>
+                    <a th:href="@{/book/del(isbn=${book.isbn})}" class="del_book">删除</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="del">
+        <button style="margin-top: 5px;margin-left: 225px;" id="add_new_book"
+                onclick="javascript:window.location.href='/book/addInput'">新增图书
+        </button>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.del_book').click(function () {
+                if (confirm("确定要删除此书吗?")) {
+                    return true;
+                }
+                return false;
+            });
+
+        })
+    </script>
+</div>
 </body>
 </html>

@@ -14,52 +14,80 @@
 <body>
 <div class="anan_index">
     <header class="header">
-        <h3>安安网络科技公司</h3>
+        <h1>工大导航</h1>
     </header>
 
     <div class="container">
         <nav class="navigation">
             <ul id="accordion" class="accordion">
                 <li>
-                    <div class="link"><i class="fa fa-user"></i>学生相关<i class="fa fa-chevron-down"></i></div>
+                    <div class="link"><i class="fa fa-user"></i>工大生活<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu">
-                        <li><a th:href="@{'/page/newSignUp.html'}" target="iframe_a">新学生报名</a></li>
-                        <li><a th:href="@{'/page/signUpList/1,10,0.html'}" target="iframe_a">学生列表</a></li>
+                        <li><a th:href="@{'/page/newSignUp.html'}" target="iframe_a">阳光服务厅</a></li>
+                        <li><a th:href="@{'/page/signUpList/1,10,0.html'}" target="iframe_a">一卡通</a></li>
+                        <li><a th:href="@{'/page/signUpList/1,10,0.html'}" target="iframe_a">电费网站</a></li>
+                        <li><a th:href="@{'/page/signUpList/1,10,0.html'}" target="iframe_a">教务处</a></li>
+                        <li><a th:href="@{'/page/signUpList/1,10,0.html'}" target="iframe_a">工大学校官网</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <div class="link"><i class="fa fa-signal"></i>公司相关<i class="fa fa-chevron-down"></i></div>
+                    <div class="link"><i class="fa fa-signal"></i>高效学习<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu">
-                        <li><a th:href="@{'#'}">公司简介</a></li>
-                        <li><a th:href="@{'#'}">公司新闻</a></li>
-                        <li><a th:href="@{'#'}">产品说明</a></li>
+                        <li><a th:href="@{'/book/list.html'}">图书管理</a></li>
+                        <li><a th:href="@{'#'}">教务系统</a></li>
+                        <li><a th:href="@{'#'}">网上作业</a></li>
+                        <li><a th:href="@{'#'}">工大微课堂</a></li>
+                        <li><a th:href="@{'#'}">毕业设计管理</a></li>
+                        <li><a th:href="@{'#'}">考试时间查询</a></li>
+                        <li><a th:href="@{'#'}">谷歌地址</a></li>
+                        <li><a th:href="@{'#'}">知网论文</a></li>
+                        <li><a th:href="@{'#'}">知网本地镜像</a></li>
                     </ul>
                 </li>
+
+                <li>
+                    <div class="link"><i class="fa fa-inbox"></i>工大专栏<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a th:href="@{'#'}">今日焦点</a></li>
+                        <li><a th:href="@{'#'}">精彩推荐</a></li>
+                        <li><a th:href="@{'#'}">网络电影</a></li>
+                        <li><a th:href="@{'#'}">工大之声</a></li>
+                        <li><a th:href="@{'#'}">原创达人</a></li>
+                    </ul>
+                </li>
+
 
                 <li>
                     <div class="link"><i class="fa fa-inbox"></i>联系我们<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu">
-                        <li><a th:href="@{'#'}">公司简介</a></li>
-                        <li><a th:href="@{'#'}">公司新闻</a></li>
-                        <li><a th:href="@{'#'}">产品说明</a></li>
+                        <li><a th:href="@{'#'}">网站简介</a></li>
+                        <li><a th:href="@{'#'}">联系方式</a></li>
+                        <li><a th:href="@{'#'}">人才服务</a></li>
                     </ul>
                 </li>
+
+
             </ul>
         </nav>
 
-        <div class="content">
-           <iframe th:src="@{'/page/ananInfo.html'}" name="iframe_a" scrolling="no"></iframe>
-        </div>
-    </div>
 
-    <footer class="footer">
-        <div class="center">
-            <div class="foot-size">客服电话：15618385713        客服邮箱：617542946@qq.com</div>
-            <div class="foot-size">安安网络科技,携你共筑销售新模式</div>
-            <div class="foot-size">Copyright ©安安网络科技有限公司  豫IC备10208270号-3</div>
+        <div class="content">
+            <h2>湖南工业大学</h2>
+            <span class="span">
+            <p>湖南工业大学是一所具有50多年办学历史的综合性大学，（含合并院校历史）2006年2月，经教育部批准，学校由株洲工学院更名为
+                湖南工业大学，同年合并了株洲师范高等专科学校和湖南冶金职业技术学院。</p>
+                <p>截至2016年6月，学校拥有2个校区，总占地面积4099亩。图书馆新馆面积3.6万平方米，馆藏图书260余万册；教学科研仪器设备总值18,603万元，教学用计算机6278台，有22个教学院（部）和1个独立学院，有全日制学生37907人，其中，硕士研究生1276人，有教职员工2370人。</p>
+            </span>
         </div>
-    </footer>
+
+
+        <!--<div class="content">-->
+        <!--<iframe th:src="@{'/page/ananInfo.html'}" name="iframe_a" scrolling="no"></iframe>-->
+        <!--</div>-->
+
+
+    </div>
 
     <script th:src="@{/scripts/index.js}"></script>
 </div>
