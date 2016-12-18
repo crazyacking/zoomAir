@@ -16,7 +16,7 @@ spring:
         driverClassName: com.mysql.jdbc.Driver
         url: jdbc:mysql://119.29.159.210:3306/test?characterEncoding=utf8
         username: root
-#        password: 123456
+        password:
 
     redis:
         host: localhost

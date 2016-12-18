@@ -3,7 +3,7 @@ package com.hut.crazyacking.model;
 import java.util.Date;
 
 /**
- * Created by crazyacking on 2016/12/17.
+ * Created by Administrator on 2015/10/25.
  */
 public class Book {
     private String name;

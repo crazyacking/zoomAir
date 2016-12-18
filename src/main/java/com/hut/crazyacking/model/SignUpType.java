@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * @author : crazyacking
- * @date : 2016/12/18
+ * @date : 2016/4/25
  */
 public class SignUpType {
     private int id;

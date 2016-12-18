@@ -5,23 +5,17 @@ import com.hut.crazyacking.model.Book;
 import java.util.List;
 
 /**
- * Created by crazyacking on 2016/12/17.
+ * Created by Administrator on 2015/10/25.
  */
 public interface BookService {
 
-    /**
-     * 新增一本书籍信息
-     *
-     * @param book 书籍信息对象
-     * @return
-     */
-    Integer addNewBook(Book book);
+    public Integer addNewBook(Book book);
 
-    Integer delBook(Book book);
+    public Integer delBook(Book book);
 
-    Integer updateBook(Book book);
+    public Integer updateBook(Book book);
 
-    List selectAllBook();
+    public List selectAllBook();
 
-    Book selectBookByIsbn(String isbn);
+    public Book selectBookByIsbn(String isbn);
 }

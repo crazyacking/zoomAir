@@ -2,7 +2,7 @@ package com.hut.crazyacking;
 
 /**
  * @author : crazyacking
- * @date : 2016-12-18
+ * @date : 2016-04-26
  */
 public class Constant {
     public static final Integer PAGENUM = 1;

@@ -3,7 +3,7 @@ package com.hut.crazyacking.util;
 import java.sql.*;
 
 /**
- * Created by crazyacking on 2016/12/17.
+ * Created by Administrator on 2015/10/25.
  */
 public class DBUtil {
     public static Connection conn = null;

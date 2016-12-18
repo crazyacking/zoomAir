@@ -7,16 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by crazyacking on 2016/12/17.
+ * Created by hsjc on 2015/10/26.
  */
 @Service
 public class BookServiceImpl implements BookService {
-    @Resource(name = "bookMapper")
+    @Autowired
     private BookMapper bookMapper;
 
     @Autowired

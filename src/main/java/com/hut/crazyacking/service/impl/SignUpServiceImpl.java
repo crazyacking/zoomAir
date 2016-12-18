@@ -10,17 +10,16 @@ import com.hut.crazyacking.service.SignUpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 
 /**
  * @author : crazyacking
- * @date : 2016/12/18
+ * @date : 2016/4/25
  */
 @Service
 public class SignUpServiceImpl extends BaseServiceImpl implements SignUpService {
-    @Resource(name = "signUpMapper")
+    @Autowired
     private SignUpMapper signUpMapper;
 
     @Override

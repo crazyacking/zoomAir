@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @author : crazyacking
- * @date : 2016/12/18
+ * @date : 2016/4/25
  */
 public interface SignUpService{
     JSONObject addNewSignUp(JSONObject paramJson);
