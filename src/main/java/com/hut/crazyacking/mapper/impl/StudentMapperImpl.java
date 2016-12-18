@@ -1,7 +1,7 @@
 package com.hut.crazyacking.mapper.impl;
 
-import com.hut.crazyacking.mapper.StudentMapper;
-import org.springframework.stereotype.Component;
+        import com.hut.crazyacking.mapper.StudentMapper;
+        import org.springframework.stereotype.Component;
 
 /**
  * Created by crazyacking on 2016/12/18.

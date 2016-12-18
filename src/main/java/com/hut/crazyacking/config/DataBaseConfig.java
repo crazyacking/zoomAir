@@ -79,7 +79,7 @@ public class DataBaseConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
-        sqlSessionFactoryBean.setTypeAliasesPackage("com.hello.model");
+        sqlSessionFactoryBean.setTypeAliasesPackage("com.hut.crazyacking.model");
         final Resource configLocation = new ClassPathResource("mybatis-config.xml");
         sqlSessionFactoryBean.setConfigLocation(configLocation);
         return sqlSessionFactoryBean.getObject();

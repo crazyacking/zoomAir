@@ -21,17 +21,16 @@ public class SignUpController {
     private SignUpService signUpService;
 
     /**
-     * @author : crazyacking
-     * @date : 2016-12-18
-     *
-     * 新同学报名
-     *
      * @param paramJson
      * @return
+     * @author : crazyacking
+     * @date : 2016-12-18
+     * <p>
+     * 新同学报名
      */
-    @RequestMapping(value = "addNewSignUp",method = RequestMethod.POST)
+    @RequestMapping(value = "addNewSignUp", method = RequestMethod.POST)
     @ResponseBody
-    public JSONObject addNewSignUp(@RequestBody JSONObject paramJson){
+    public JSONObject addNewSignUp(@RequestBody JSONObject paramJson) {
         JSONObject resultJson = signUpService.addNewSignUp(paramJson);
         return resultJson;
     }
