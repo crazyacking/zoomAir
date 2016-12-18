@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+    <form method="post" action="/book/addBook">
+        <label for="name">书名</label>
+        <input name="name" id="name"/><br/>
+
+        <label for="author">作者</label>
+        <input name="author" id="author"/><br/>
+
+        <label for="isbn">ISBN</label>
+        <input name="isbn" id="isbn"/><br/>
+
+        <label for="price">价格</label>
+        <input name="price" id="price"/><br/>
+
+        <button type="submit">新增</button>
+    </form>
+</body>
+</html>

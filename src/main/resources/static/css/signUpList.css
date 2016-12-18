@@ -1,0 +1,119 @@
+* {
+    margin : 0;
+    padding : 0;
+    font-size : 12px;
+    font-family : '幼圆';
+}
+
+body {
+    background: url("../images/bg.jpg") repeat-x;
+}
+
+.signUpList{
+    width : 600px;
+    height : 500px;
+    margin : 60px auto ;
+}
+
+.search_stuName {
+    height : 30px;
+    float : right ;
+}
+
+.search_stuName input {
+    width : 180px;
+    height : 26px;
+    border-radius : 4px;
+    border : #CCC solid 1px;
+}
+
+.search_stuName button {
+    width : 60px;
+    height : 26px;
+    color : #000;
+    border-radius : 4px;
+    border : #CCC solid 1px;
+}
+
+.signUpList table {
+    clear : both;
+}
+
+.signUpList table thead th{
+    width : 85px;
+    height : 30px;
+    color : #FFF;
+    background : #333;
+}
+
+
+.signUpList table tbody tr{
+    height : 30px;
+    line-height : 30px;
+    text-align : center;
+}
+
+.signUpList table tbody td {
+    font-size : 14px;
+    font-weight : 400;
+    border-left : 1px solid #CCC;
+    border-bottom : 1px solid #CCC;
+}
+
+.signUpList table tbody td:nth-child(7) {
+    border-right : 1px solid #CCC;
+}
+
+.signUpList table tbody td:nth-child(2) {
+    width : 120px;
+}
+.signUpList table tbody td:nth-child(4) {
+    width : 120px;
+}
+
+nav{
+    margin-top : 10px;
+}
+
+nav div {
+    float : left ;
+    height : 34px;
+    line-height : 34px;
+    font-size : 14px;
+    margin-left : 300px;
+}
+
+nav ul {
+    float : right;
+}
+
+.pagination {
+    list-style : none;
+
+}
+
+.pagination li {
+    float : left;
+}
+
+.pagination li a {
+    width :30px;
+    display : block;
+
+    height : 34px;
+    line-height : 34px;
+    border-left : #CCC solid 1px;
+    border-bottom : #CCC solid 1px;
+    border-top : #CCC solid 1px;
+    text-decoration : none;
+    text-align : center;
+    font-size : 12px;
+}
+
+.pagination li:last-child a {
+    border-right : #CCC solid 1px;
+}
+
+.pagination li a:hover {
+    background : #CCC;
+}

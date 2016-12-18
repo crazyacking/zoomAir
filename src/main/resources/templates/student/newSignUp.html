@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>欢迎新同学</title>
+    <script type="text/javascript" th:src="@{http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/newSignUp.css}"/>
+    <link rel="stylesheet" th:href="@{/scripts/jquery/nice-validator-0.8.1/jquery.validator.css}"/>
+    <script type="text/javascript" th:src="@{/scripts/jquery/nice-validator-0.8.1/jquery.validator.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/jquery/nice-validator-0.8.1/local/zh-CN.js}"></script>
+
+    <link rel="shortcut icon" th:href="@{/images/link_ico.ico}"/>
+</head>
+<body>
+    <div id="content_newStu">
+        <span class="title">报名</span>
+        <hr/>
+        <form id="form_signUp">
+            <div class="form-group">
+                <label for="stuName"><font style="color: #F00;">*</font>报名人</label>
+                <p><input type="text" name="stuName" id="stuName" placeholder="报名人"/></p>
+            </div>
+
+            <div class="form-group">
+                <label for="signUpKey"><font style="color: #F00;">*</font>报名类型</label>
+                <select name="signUpKey" id="signUpKey">
+                    <option th:each="signUpType : ${signUpTypeList}" th:value="${signUpType.signUpKey}" th:text="${signUpType.signUpName}"></option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="contactor"><font style="color: #F00;">*</font>联系人</label>
+                <input type="text" name="contactor" id="contactor" placeholder="联系人"/>
+            </div>
+
+            <div class="form-group">
+                <label for="phone"><font style="color: #F00;">*</font>手机</label>
+                <input type="text" name="phone" id="phone" placeholder="手机"/>
+            </div>
+
+            <div class="form-group">
+                <label for="qq">QQ</label>
+                <input type="text" name="qq" id="qq" placeholder="QQ"/>
+            </div>
+
+            <div class="form-group">
+                <label for="weiChart">微信</label>
+                <input type="text" name="weiChart" id="weiChart" placeholder="微信"/>
+            </div>
+
+            <div class="form-group">
+                <label for="address">地址</label>
+                <input type="text" name="address" id="address" placeholder="地址"/>
+            </div>
+
+            <div class="form-button">
+                <button>报名</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" th:src="@{/scripts/student/newSignUp.js}"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hello.mapper.SignUpMapper">
+    <sql id="Base_Column_List" >
+       id,stuName,signUpKey,contactor,phone,qq,weiChart,address,createDate
+    </sql>
+
+    <insert id="addNewSignUp">
+        INSERT INTO tb_signup
+        (stuName,
+        signUpKey,
+        contactor,
+        phone,
+        qq,
+        weiChart,
+        address)
+        value(
+        #{stuName},
+        #{signUpKey},
+        #{contactor},
+        #{phone},
+        #{qq},
+        #{weiChart},
+        #{address})
+    </insert>
+
+    <select id="getAllSignUp" resultType="java.util.HashMap">
+        SELECT
+        stuName,
+        signUpKey,
+        contactor,
+        phone,
+        (CASE
+          WHEN ts.qq IS NULL THEN 'xxx'
+          ELSE ts.qq
+          END ) AS qq,
+        (CASE
+          WHEN ts.weiChart IS NULL THEN 'xxx'
+          ELSE ts.weiChart
+          END ) AS weiChart,
+        (CASE
+          WHEN ts.weiChart IS NULL THEN 'xxx'
+          ELSE ts.weiChart
+          END ) AS weiChart,
+        (CASE
+          WHEN ts.address IS NULL THEN 'xxx'
+          ELSE ts.address
+          END ) AS address,
+        (DATE_FORMAT(ts.createDate,'%Y-%m-%d')) AS createDate
+       FROM tb_signup ts
+       <where>
+           <if test="stuName != null">
+               stuName like CONCAT('%','${stuName}','%')
+           </if>
+       </where>
+    </select>
+</mapper>

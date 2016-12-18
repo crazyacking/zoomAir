@@ -1,0 +1,33 @@
+# Server settings
+server:
+    port: 8080
+    address: localhost
+
+# SPRING PROFILES
+spring:       
+    # HTTP ENCODING
+    http:
+        encoding.charset: UTF-8
+        encoding.enable: true
+        encoding.force: true
+
+    # DATASOURCE
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://119.29.159.210:3306/test?characterEncoding=utf8
+        username: root
+#        password: 123456
+
+    redis:
+        host: localhost
+        password:
+        port: 6379
+
+    #THYMELEAF
+    thymeleaf:
+        cache: false
+
+# LOGGING
+logging:
+    level:
+       com.ibatis: DEBUG

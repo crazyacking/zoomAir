@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>报名列表</title>
+    <script type="text/javascript" th:src="@{http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js}"></script>
+    <link rel="shortcut icon" th:href="@{/images/link_ico.ico}"/>
+    <link type="text/css" th:href="@{/css/signUpList.css}" rel="stylesheet"/>
+</head>
+<body>
+    <div class="signUpList">
+        <div class="search_stuName">
+            <input type="search" name="stuName" th:if="${stuName=='0'}" placeholder="输入报名人…"/>
+            <input type="search" name="stuName" th:unless="${stuName=='0'}" th:value="${stuName}" placeholder="输入报名人…"/>
+
+            <button class="but_search">查询</button>
+        </div>
+        <table>
+            <thead>
+                <th>报名人</th>
+                <th>报名类型</th>
+                <th>联系人</th>
+                <th>手机</th>
+                <th>QQ</th>
+                <th>手机</th>
+                <th>地址</th>
+            </thead>
+            <tbody>
+                <tr th:each="signUp : ${signUpList}">
+                    <td th:text="${signUp.stuName}"></td>
+                    <td th:if="${signUp.signUpKey == 'fourMonth'}" th:text="${'全部课程4个月'}"></td>
+                    <td th:if="${signUp.signUpKey == 'listenTest'}" th:text="${'试听10天'}"></td>
+
+                    <td th:text="${signUp.contactor}"></td>
+                    <td th:text="${signUp.phone}"></td>
+
+                    <td th:if="${signUp.qq == 'xxx'}"></td>
+                    <td th:unless="${signUp.qq == 'xxx'}" th:text="${signUp.qq}"></td>
+
+                    <td th:if="${signUp.weiChart == 'xxx'}"></td>
+                    <td th:unless="${signUp.weiChart == 'xxx'}" th:text="${signUp.weiChart}"></td>
+
+                    <td th:if="${signUp.address == 'xxx'}"></td>
+                    <td th:unless="${signUp.address == 'xxx'}" th:text="${signUp.address}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <nav>
+            <div class="record_count">共<font th:text="${total}" style="color : #F00;font-size : 18px;"></font>人报名</div>
+            <ul class="pagination">
+                <li><a th:href="@{'/page/signUpList/1,' + ${pageSize}+','+ ${stuName}+'.html'}">首页</a> </li>
+                <li>
+                    <a th:if="${hasPrevioisPage == true}"
+                       th:href="@{'/page/signUpList/' + ${prePage} + ',' + ${pageSize} + ','+ ${stuName}+'.html'}"
+                            aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a th:each="pageN : ${navigatepageNums}"
+                       th:href="@{'/page/signUpList/' + ${pageN} + ',' + ${pageSize} + ','+ ${stuName}+ '.html'}" th:text="${pageN}"></a>
+                </li>
+
+                <li>
+                    <a th:if="${hastNextPage == true}"
+                       th:href="@{'/page/signUpList/' + ${nextPage} + ',' + ${pageSize} + ','+ ${stuName}+'.html'}"   aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                <li><a th:href="@{'/page/signUpList/' + ${pages} + ',' + ${pageSize} + ','+ ${stuName}+'.html'}">未页</a> </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script type="text/javascript" th:src="@{/scripts/ananUtil.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/student/signUpList.js}"></script>
+</body>
+</html>

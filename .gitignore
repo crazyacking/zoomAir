@@ -1,0 +1,17 @@
+.idea
+.svn
+out
+target
+**/META-INF
+**/classes
+**/lib
+*.iml
+mvnw
+mvnw.cmd
+
+.DS_Store
+.DS_Store*
+._*
+.Spotlight*
+ehthumbs.db
+Thumbs.db

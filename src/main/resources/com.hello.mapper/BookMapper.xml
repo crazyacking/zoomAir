@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hello.mapper.BookMapper">
+    <insert id="addNewBook" parameterType="com.hello.model.Book">
+        INSERT INTO book (name,price,isbn,author,createdTime,expired) VALUE(#{name},#{price},#{isbn},#{author},#{createdTime},#{expired})
+    </insert>
+
+    <delete id="delBook" parameterType="java.lang.String">
+        DELETE FROM book where isbn = #{isbn}
+    </delete>
+
+    <update id="updateBook">
+        UPDATE book
+        <set>
+            <if test="book.price != null">
+                price = #{book.price},
+            </if>
+
+            <if test="book.expired != null">
+                expired = #{book.expired}
+            </if>
+        </set>
+        WHERE isbn = #{book.isbn}
+    </update>
+
+    <select id="selectAllBook" resultType="java.util.HashMap">
+        SELECT * FROM book
+    </select>
+
+    <select id="selectBookByIsbn" parameterType="java.lang.String" resultType="com.hello.model.Book">
+        SELECT * FROM book WHERE isbn = #{isbn}
+    </select>
+</mapper>

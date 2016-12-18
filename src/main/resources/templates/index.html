@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>主页</title>
+    <script type="text/javascript" th:src="@{http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js}"></script>
+    <link rel="shortcut icon" th:href="@{/images/link_ico.ico}"/>
+    <!-- Iconos -->
+    <link th:href="@{http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link type="text/css" th:href="@{/css/index.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="anan_index">
+    <header class="header">
+        <h3>安安网络科技公司</h3>
+    </header>
+
+    <div class="container">
+        <nav class="navigation">
+            <ul id="accordion" class="accordion">
+                <li>
+                    <div class="link"><i class="fa fa-user"></i>学生相关<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a th:href="@{'/page/newSignUp.html'}" target="iframe_a">新学生报名</a></li>
+                        <li><a th:href="@{'/page/signUpList/1,10,0.html'}" target="iframe_a">学生列表</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="link"><i class="fa fa-signal"></i>公司相关<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a th:href="@{'#'}">公司简介</a></li>
+                        <li><a th:href="@{'#'}">公司新闻</a></li>
+                        <li><a th:href="@{'#'}">产品说明</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="link"><i class="fa fa-inbox"></i>联系我们<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a th:href="@{'#'}">公司简介</a></li>
+                        <li><a th:href="@{'#'}">公司新闻</a></li>
+                        <li><a th:href="@{'#'}">产品说明</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content">
+           <iframe th:src="@{'/page/ananInfo.html'}" name="iframe_a" scrolling="no"></iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="center">
+            <div class="foot-size">客服电话：15618385713        客服邮箱：617542946@qq.com</div>
+            <div class="foot-size">安安网络科技,携你共筑销售新模式</div>
+            <div class="foot-size">Copyright ©安安网络科技有限公司  豫IC备10208270号-3</div>
+        </div>
+    </footer>
+
+    <script th:src="@{/scripts/index.js}"></script>
+</div>
+</body>
+</html>

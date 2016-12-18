@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<form method="post" action="/book/update">
+    <label for="name">书名</label>
+    <span th:text="${book.name}" id="name"></span><br/>
+
+    <label for="author">作者</label>
+    <span th:text="${book.author}" id="author"></span><br/>
+
+    <label for="isbn">ISBN</label>
+    <span id="isbn" th:text="${book.isbn}"/>
+    <input type="hidden" name="isbn" th:value="${book.isbn}"/><br/>
+
+    <label for="price">价格</label>
+    <input name="price" id="price" th:value="${book.price}"/><br/>
+
+    <label for="price">是否下架</label>
+    <select name="expired" th:switch="${book.expired}">
+        <option value="0" th:case="0" selected="selected">下架</option>
+        <option value="0" th:if="${book.expired == 1}">下架</option>
+
+        <option value="1" th:case="1" selected="selected">有货</option>
+        <option value="1" th:case="0">有货</option>
+
+        <!--<option value="0" th:if="${book.expired == 0}" selected="selected">下架</option>
+        <option value="0" th:if="${book.expired == 1}">下架</option>
+
+        <option value="1" th:if="${book.expired == 1}" selected="selected">有货</option>
+        <option value="1" th:if="${book.expired == 0}">有货</option>-->
+    </select><br/>
+
+    <button type="submit">修改</button>
+</form>
+</body>
+</html>

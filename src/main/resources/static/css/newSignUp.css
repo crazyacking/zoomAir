@@ -1,0 +1,80 @@
+* {
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-size : 12px;
+}
+
+body {
+    background: url("../images/bg.jpg") repeat-x;
+}
+
+#content_newStu {
+    width : 520px;
+    margin : 60px auto;
+    background : #F8FDFF;
+}
+
+#content_newStu .title {
+    font-size : 16px;
+    font-weight : bold;
+    font-family : '幼圆';
+    border-left : 3px #CCC solid;
+    margin : 0 3px 0 1px;
+    padding : 0 6px 9px 6px;
+}
+
+#content_newStu hr {
+    margin : 10px 0;
+    border : #CCC solid 1px;
+}
+
+#content_newStu .form-group {
+    height : 38px;
+    line-height : 38px;
+    padding : 2px;
+}
+
+#content_newStu .form-group label {
+    font-size : 14px;
+    font-family : '幼圆';
+    width : 120px;
+    padding : 0 10px;
+    float : left;
+    text-align : right;
+
+}
+
+#content_newStu .form-group {
+    clear :left;
+}
+
+#content_newStu .form-group input,select,option {
+    width : 230px;
+    height : 25px;
+    font-size : 16px;
+    font-family : '幼圆';
+    border-radius:3px;
+    border : 1px solid #CCC;
+
+    -webkit-box-shadow:inset 0px 0px 1px #fff;
+    -moz-box-shadow:inset 0px 0px 1px #fff;
+    box-shadow:inset 0px 0px 1px #fff
+}
+
+#content_newStu .form-button {
+    padding-left : 100px;
+}
+
+#content_newStu .form-button button {
+    width : 120px;
+    height : 30px;
+    line-height : 30px;
+    margin : 20px auto;
+    text-align : center;
+    color : #FFF;
+    border-radius:3px;
+    border : 1px solid #CCC;
+    font-size : 16px;
+    background : #7CBC9B;
+}
