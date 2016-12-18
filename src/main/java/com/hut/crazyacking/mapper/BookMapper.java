@@ -2,7 +2,9 @@ package com.hut.crazyacking.mapper;
 
 import com.hut.crazyacking.model.Book;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -13,9 +15,9 @@ public interface BookMapper {
 
     Integer addNewBook(Book book);
 
-    Integer delBook(@Param(value = "isbn")String isbn);
+    Integer delBook(@Param(value = "isbn") String isbn);
 
-    Integer updateBook(@Param(value = "book")Book book);
+    Integer updateBook(@Param(value = "book") Book book);
 
-    Book selectBookByIsbn(@Param(value = "isbn")String isbn);
+    Book selectBookByIsbn(@Param(value = "isbn") String isbn);
 }
