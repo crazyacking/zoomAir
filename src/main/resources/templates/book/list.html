@@ -24,16 +24,26 @@
         margin-top: 10px;
         margin-left: 225px;
         margin: 0px auto;
+        padding-top: 50px;
+    }
+
+    .img {
+        display: block;
+        margin: 0 auto;
     }
 
     .con2 {
         width: 100%;
         height: auto;
         margin: 0 auto;
+        margin-left: 225px;
+        margin: 0px auto;
     }
 
     .span-main {
-        padding-top: 45px;
+        padding-top: 25px;
+        display: block;
+        margin: 0 auto;
     }
 
     .span1 {
@@ -54,7 +64,7 @@
     }
 
     .UnityTable_n {
-        float: left;
+        /*float: left;*/
         overflow-x: auto;
         overflow-y: hidden;
         width: 100%;
@@ -64,7 +74,8 @@
         border-right: 1px solid #DBDBDB;
         border-bottom: 1px solid #DBDBDB;
         border-top: 1px solid #DBDBDB;
-        margin: auto;
+        display: block;
+        margin: 0 auto;
     }
 
     .UnityTable .tablehead {
@@ -91,7 +102,8 @@
         white-space: nowrap;
         padding: 0 10px 0 0;
         max-width: 200px;
-        margin: auto;
+        display: block;
+        margin: 0 auto;
     }
 
     .UnityTable .tablehead tr .tdiv img {
@@ -105,11 +117,20 @@
         padding: 0px 10px;
         margin: 0px;
         border-left: 1px solid #EFEFEF;
-        margin: auto;
+        display: block;
+        margin: 0 auto;
     }
 
     .UnityTable .tablehead tr td:last-child {
-        border-right: none;
+
+    }
+
+    .addButton {
+        margin-top: 10px;
+        margin-left: 225px;
+        margin: 0px auto;
+        display: block;
+        margin: 0 auto;
     }
 
 
@@ -117,14 +138,14 @@
 
 <body>
 <div class="con1">
-    <img src="../images/lg.png"/>
+    <img class="img" src="../images/lg.png"/>
 </div>
 <div class="con2">
     <div class="span-main">
         <span class="span1">书籍列表</span>
     </div>
     <div class="UnityTable_n">
-        <table class="tablehead no_bL" cellpadding="1px" border="2px">
+        <table class="tablehead no_bL" cellpadding="0.5px" border="1px">
             <thead>
             <th>书名</th>
             <th>价格</th>
@@ -186,7 +207,7 @@
         </table>
     </div>
 
-    <div class="del">
+    <div class="addButton">
         <button style="margin-top: 5px;margin-left: 225px;" id="add_new_book"
                 onclick="javascript:window.location.href='/book/addInput'">新增图书
         </button>
