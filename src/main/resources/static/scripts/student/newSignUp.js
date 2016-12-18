@@ -1,5 +1,5 @@
 /**
- * Created by crazyacking on 2016-12-18.
+ * Created by crazyacking on 2016/12/17.
  */
 $(function(){
     $('#form_signUp').validator({

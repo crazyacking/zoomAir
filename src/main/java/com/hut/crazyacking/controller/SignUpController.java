@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author : crazyacking
- * @date : 2016-12-18
+ * @date : 2016/12/17
  */
 @Controller
 @RequestMapping("/signUp/")
@@ -21,16 +21,17 @@ public class SignUpController {
     private SignUpService signUpService;
 
     /**
+     * @author : crazyacking
+     * @date : 2016-4-26
+     *
+     * 新同学报名
+     *
      * @param paramJson
      * @return
-     * @author : crazyacking
-     * @date : 2016-12-18
-     * <p>
-     * 新同学报名
      */
-    @RequestMapping(value = "addNewSignUp", method = RequestMethod.POST)
+    @RequestMapping(value = "addNewSignUp",method = RequestMethod.POST)
     @ResponseBody
-    public JSONObject addNewSignUp(@RequestBody JSONObject paramJson) {
+    public JSONObject addNewSignUp(@RequestBody JSONObject paramJson){
         JSONObject resultJson = signUpService.addNewSignUp(paramJson);
         return resultJson;
     }
