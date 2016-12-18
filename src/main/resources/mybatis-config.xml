@@ -4,10 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
        <typeAliases>
-           <typeAlias type="com.hello.model.Book" alias="Book"/>
-           <typeAlias type="com.hello.model.SignUp" alias="SignUp"/>
-           <typeAlias type="com.hello.model.SignUpType" alias="SignUpType"/>
-           <typeAlias type="com.hello.model.Student" alias="Student"/>
+           <typeAlias type="com.hut.crazyacking.model.Book" alias="Book"/>
+           <typeAlias type="com.hut.crazyacking.model.SignUp" alias="SignUp"/>
+           <typeAlias type="com.hut.crazyacking.model.SignUpType" alias="SignUpType"/>
+           <typeAlias type="com.hut.crazyacking.model.Student" alias="Student"/>
        </typeAliases>
 
         <!--

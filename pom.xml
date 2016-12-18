@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>springboot_hello</artifactId>
+	<artifactId>zoomAir</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springboot_hello</name>
+	<name>zoomAir</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

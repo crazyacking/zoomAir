@@ -4,7 +4,7 @@
  */
 $(function(){
     /**
-     * @author : wuyue
+     * @author : crazyacking
      * @date : 2016-12-18
      *
      * 点击查询事件
@@ -17,7 +17,7 @@ $(function(){
 });
 
 /**
- * @author : wuyue
+ * @author : crazyacking
  * @date : 2016-12-18
  *
  * 返回URL

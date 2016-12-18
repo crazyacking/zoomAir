@@ -1,5 +1,5 @@
 /**
- * Created by zhuzi on 2016/4/26.
+ * Created by crazyacking on 2016-12-18.
  */
 var AnAnUtil = {
     /**

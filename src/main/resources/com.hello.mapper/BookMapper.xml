@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hello.mapper.BookMapper">
-    <insert id="addNewBook" parameterType="com.hello.model.Book">
+<mapper namespace="com.hut.crazyacking.mapper.BookMapper">
+    <insert id="addNewBook" parameterType="com.hut.crazyacking.model.Book">
         INSERT INTO book (name,price,isbn,author,createdTime,expired) VALUE(#{name},#{price},#{isbn},#{author},#{createdTime},#{expired})
     </insert>
 
@@ -27,7 +27,7 @@
         SELECT * FROM book
     </select>
 
-    <select id="selectBookByIsbn" parameterType="java.lang.String" resultType="com.hello.model.Book">
+    <select id="selectBookByIsbn" parameterType="java.lang.String" resultType="com.hut.crazyacking.model.Book">
         SELECT * FROM book WHERE isbn = #{isbn}
     </select>
 </mapper>
