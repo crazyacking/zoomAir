@@ -22,7 +22,60 @@
         background: #F8FDFF;
     }
 
+    .con1 {
+        margin-top: 10px;
+        margin-left: 225px;
+        margin: 0px auto;
+        padding-top: 50px;
+    }
+
     .img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .con2 {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-left: 225px;
+        margin: 0px auto;
+    }
+
+    .span-main {
+        padding-top: 25px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .span1 {
+        text-align: center;
+        line-height: 33px;
+        margin-left: 225px;
+        color: #DB7C22;
+        font-weight: bold;
+    }
+
+    .WJtable {
+        margin-top: 20px;
+    }
+
+    .UnityTable {
+        width: 927px;
+        margin: 0 auto;
+    }
+
+    .UnityTable_n {
+        /*float: left;*/
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+        min-height: 340px;
+        position: relative;
+        border-left: 1px solid #DBDBDB;
+        border-right: 1px solid #DBDBDB;
+        border-bottom: 1px solid #DBDBDB;
+        border-top: 1px solid #DBDBDB;
         display: block;
         margin: 0 auto;
     }
@@ -81,6 +134,8 @@
         display: block;
         margin: 0 auto;
     }
+
+
 </style>
 
 <body>
@@ -89,14 +144,25 @@
 </div>
 
 <div class="container-fluid">
+    <div class="span-main">
+        <span class="span1">书籍列表</span>
+    </div>
     <div class="row-fluid">
         <h1></h1>
         <div>
             <ul class="breadcrumb">
-                <li>基本功能：</li>
-                <li>分页 <span class="divider">/</span></li>
-                <li>排序 <span class="divider">/</span></li>
-                <li>过滤</li>
+                <li>
+                    基本功能：
+                </li>
+                <li>
+                    分页 <span class="divider">/</span>
+                </li>
+                <li>
+                    排序 <span class="divider">/</span>
+                </li>
+                <li>
+                    过滤
+                </li>
             </ul>
         </div>
     </div>
@@ -133,7 +199,10 @@
                     <a th:href="@{/book/updateInput(isbn=${book.isbn})}" id="modiry_book">修改</a>
                     <a th:href="@{/book/del(isbn=${book.isbn})}" class="del_book">删除</a>
                 </td>
+
+
             </tr>
+
             </tbody>
         </table>
     </div>

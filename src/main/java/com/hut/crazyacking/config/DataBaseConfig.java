@@ -1,7 +1,7 @@
 package com.hut.crazyacking.config;
 
 /**
- * Created by crazyacking on 2016/12/17.
+ * Created by hsjc on 2015/10/26.
  */
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -35,7 +35,7 @@ public class DataBaseConfig {
     @Bean
     public DruidDataSource dataSource(){
         driverClassName = "com.mysql.jdbc.Driver";
-        url = "jdbc:mysql://119.29.159.210:3306/test?useUnicode=true&characterEncoding=utf-8";
+        url = "jdbc:mysql://119.29.159.210:3306/test?characterEncoding=utf8";
         username = "root";
         password = "";
 
@@ -79,7 +79,7 @@ public class DataBaseConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
-        sqlSessionFactoryBean.setTypeAliasesPackage("com.hello.model");
+        sqlSessionFactoryBean.setTypeAliasesPackage("com.hut.crazyacking.model");
         final Resource configLocation = new ClassPathResource("mybatis-config.xml");
         sqlSessionFactoryBean.setConfigLocation(configLocation);
         return sqlSessionFactoryBean.getObject();
@@ -88,7 +88,7 @@ public class DataBaseConfig {
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer() throws Exception{
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("com.hello.mapper");
+        mapperScannerConfigurer.setBasePackage("com.hut.crazyacking.mapper");
         mapperScannerConfigurer.setSqlSessionFactory(sqlSessionFactory());
         return mapperScannerConfigurer;
     }

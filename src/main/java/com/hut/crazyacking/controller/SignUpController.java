@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author : crazyacking
- * @date : 2016-12-18
+ * @date : 2016/12/17
  */
 @Controller
 @RequestMapping("/signUp/")
@@ -22,7 +22,7 @@ public class SignUpController {
 
     /**
      * @author : crazyacking
-     * @date : 2016-12-18
+     * @date : 2016/12/17
      *
      * 新同学报名
      *
