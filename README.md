@@ -1,16 +1,24 @@
 # zoomAir
-##-- SpringBoot入门项目实战
 
 [![build](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/bt345.svg)](https://github.com/crazyacking/zeekEye)
 [![module](https://img.shields.io/puppetforge/mc/camptocamp.svg)](https://github.com/crazyacking/zeekEye)
 [![license](https://img.shields.io/crates/l/rustc-serialize.svg)](https://github.com/crazyacking/zeekEye)
 
 
-**zoomAir**采用SpringBoot作为Servlet容器，后端采用`Java`语言开发，基于`springMVN`框架，前端页面使用Thymeleaf模板.
+**zoomAir**采用SpringBoot作为Servlet容器，后端使用`Java`语言开发，基于`springMVN`框架，前端页面使用Thymeleaf模板.
 
 特点概述：
 
 - **数据存储**：采用`MySQL`数据库存储数据，支持多线程并发操作.Book相关的使用了Redis缓存,如果没装Redis,可以自行删除Redis相关的代码
+
+- **技术特点**
+  <ul>
+  <li>SpringBoot作为servlet容器</li>
+  <li>SpringMVC轻量级Web框架</li>
+  <li>前后端通信采用RESTful架构</li>
+  <li>Bootstrap前端开发框架，简洁、直观</li>
+  <li>应用部署：采用Docker开源引擎，实现web应用自动化打包和发布</li>
+  </ul>
 
 - **功能实现**：内网导航。待更新...
 
