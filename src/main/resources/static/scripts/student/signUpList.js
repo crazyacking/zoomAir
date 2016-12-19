@@ -1,11 +1,11 @@
 /**
  * @author : crazyacking
- * @date : 2016-4-26
+ * @date : 2016/12/17
  */
 $(function(){
     /**
      * @author : crazyacking
-     * @date : 2016-4-26
+     * @date : 2016/12/17
      *
      * 点击查询事件
      *
@@ -18,7 +18,7 @@ $(function(){
 
 /**
  * @author : crazyacking
- * @date : 2016-4-26
+ * @date : 2016/12/17
  *
  * 返回URL
  *

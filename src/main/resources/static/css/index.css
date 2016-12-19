@@ -1,51 +1,73 @@
-*{
-    margin : 0;
-    padding : 0;
-    font-size : 12px;
-    font-family : '幼圆';
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: '幼圆';
 }
 
 a {
-    text-decoration : none;
+    text-decoration: none;
 }
 
 .header {
-    text-align : center;
-    margin-top : 10px;
-    border-bottom : 1px solid #ccc;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header h1 {
+    font-size: 35px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    letter-spacing: 6px;
+    margin-top: 35px;
+}
+
+.content h2 {
+    font-size: 20px;
+    height: 10px;
+    line-height: 25px;
+    display: block;
+    letter-spacing: 6px;
+    margin-top: 10px;
+    margin-left:5px;
+    margin-right:5px;
+    font-family: '幼圆';
 }
 
 .header h3 {
-    font-size : 18px;
-    height : 30px;
-    line-height : 30px;
-    display : block;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
     letter-spacing: 6px
 }
 
 .anan_index {
-    width : 800px;
-    margin : 0 auto;
+    width: 800px;
+    margin: 0 auto;
 }
 
 .header {
-    height : 40px;
+    height: 40px;
 }
 
 .container {
-    height : 500px;
-    margin-top : 10px;
+    height: 500px;
+    margin-top: 10px;
 }
 
 .container .navigation {
-    width : 150px;
-    float : left;
-    border-top : none;
+    width: 150px;
+    float: left;
+    border-top: none;
 }
 
 .container .navigation ul {
-    list-style : none;
+    list-style: none;
 }
+
 .accordion {
     width: 100%;
     max-width: 150px;
@@ -68,6 +90,12 @@ a {
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
+}
+
+element.style {
+    margin: 0;
+    padding: 0;
+    font-family: '幼圆';
 }
 
 .accordion li:last-child .link {
@@ -98,6 +126,7 @@ a {
 .accordion li.open i {
     color: #b63b4d;
 }
+
 .accordion li.open i.fa-chevron-down {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -135,29 +164,40 @@ a {
 }
 
 .container .content {
-    width : 648px;
-    height : 500px;
-    float : right;
-    border : #CCC 1px solid;
+    width: 648px;
+    height: 500px;
+    float: right;
+    border: #CCC 1px solid;
+}
+
+.container .content .span {
+    font-size: 16px;
+    height: 10px;
+    line-height: 25px;
+    display: block;
+    margin-top: 30px;
+    margin-left:5px;
+    margin-right:5px;
+    font-family: '幼圆';
 }
 
 .container iframe {
-    width : 648px;
-    height : 500px;
-    border : none;
+    width: 648px;
+    height: 500px;
+    border: none;
 }
 
 .footer {
-    clear : both;
+    clear: both;
 }
 
 .footer .center {
-    text-align : center;
-    line-height : 30px;
+    text-align: center;
+    line-height: 30px;
 }
 
 .footer .center .foot-size {
-    font-family : 'Arial';
-    color : #000;
-    letter-spacing : 1px;
+    font-family: 'Arial';
+    color: #000;
+    letter-spacing: 1px;
 }

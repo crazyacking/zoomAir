@@ -22,7 +22,7 @@ public class SignUpController {
 
     /**
      * @author : crazyacking
-     * @date : 2016-4-26
+     * @date : 2016/12/17
      *
      * 新同学报名
      *
