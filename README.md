@@ -24,26 +24,6 @@
 
 ------欢迎 Fork !
 
--------------------
-<div><div class="toc"><div class="toc">
-<ul>
-<li><a href="#zeekeye">zeekEye</a><ul>
-<li><a href="#programmable-spidering-of-web-sites-with-java">– Programmable spidering of web sites with Java</a></li>
-<li><a href="#安装">安装</a></li>
-<li><a href="#api如何使用">API(如何使用)</a><ul>
-<li><a href="#project config">project config</a><ul>
-<li><a href="#weibo-spider选项">weibo-Spider(选项)</a></li>
-</ul>
-<li><a href="#拓展-更新缓存">拓展 / 更新缓存</a></li>
-<li><a href="#设置冗余日志级别">设置冗余/日志级别</a></li>
-<li><a href="#source-code">Source Code</a></li>
-</ul>
-</li>
-<li><a href="#反馈与建议">反馈与建议</a></li>
-</ul>
-</li>
-</ul>
-
 ## 安装
 
 默认编辑器是IntelliJ IDEA 14.1.4，开发环境为jdk1.7.0，编译执行前先用IntelliJ IDEA把项目源码导出成jar包.
@@ -53,9 +33,6 @@
   conf/spider.properties文件为整个项目相关参数的配置文件，包括数据库接口地址配置等.
 ```
 
-#### weibo-Spider(选项)
-
-"选项"包含以下字段：
 
 ### 拓展 / 更新缓存
 
