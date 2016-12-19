@@ -1,40 +1,28 @@
 # zoomAir
-##-- SpringBoot入门项目实战
 
 [![build](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/bt345.svg)](https://github.com/crazyacking/zeekEye)
 [![module](https://img.shields.io/puppetforge/mc/camptocamp.svg)](https://github.com/crazyacking/zeekEye)
 [![license](https://img.shields.io/crates/l/rustc-serialize.svg)](https://github.com/crazyacking/zeekEye)
 
 
-**zoomAir**采用SpringBoot作为Servlet容器，后端采用`Java`语言开发，基于`springMVN`框架，前端页面使用Thymeleaf模板.
+**zoomAir**采用SpringBoot作为Servlet容器，后端使用`Java`语言开发，基于`springMVN`框架，前端页面使用Thymeleaf模板.
 
 特点概述：
 
 - **数据存储**：采用`MySQL`数据库存储数据，支持多线程并发操作.Book相关的使用了Redis缓存,如果没装Redis,可以自行删除Redis相关的代码
 
+- **技术特点**
+  <ul>
+  <li>SpringBoot作为servlet容器</li>
+  <li>SpringMVC轻量级Web框架</li>
+  <li>前后端通信采用RESTful架构</li>
+  <li>Bootstrap前端开发框架，简洁、直观</li>
+  <li>应用部署：采用Docker开源引擎，实现web应用自动化打包和发布</li>
+  </ul>
+
 - **功能实现**：内网导航。待更新...
 
 ------欢迎 Fork !
-
--------------------
-<div><div class="toc"><div class="toc">
-<ul>
-<li><a href="#zeekeye">zeekEye</a><ul>
-<li><a href="#programmable-spidering-of-web-sites-with-java">– Programmable spidering of web sites with Java</a></li>
-<li><a href="#安装">安装</a></li>
-<li><a href="#api如何使用">API(如何使用)</a><ul>
-<li><a href="#project config">project config</a><ul>
-<li><a href="#weibo-spider选项">weibo-Spider(选项)</a></li>
-</ul>
-<li><a href="#拓展-更新缓存">拓展 / 更新缓存</a></li>
-<li><a href="#设置冗余日志级别">设置冗余/日志级别</a></li>
-<li><a href="#source-code">Source Code</a></li>
-</ul>
-</li>
-<li><a href="#反馈与建议">反馈与建议</a></li>
-</ul>
-</li>
-</ul>
 
 ## 安装
 
@@ -45,9 +33,6 @@
   conf/spider.properties文件为整个项目相关参数的配置文件，包括数据库接口地址配置等.
 ```
 
-#### weibo-Spider(选项)
-
-"选项"包含以下字段：
 
 ### 拓展 / 更新缓存
 
